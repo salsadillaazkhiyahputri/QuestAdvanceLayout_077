@@ -93,6 +93,14 @@ fun ActivitasPertama(modifier: Modifier) {
                         .size(100.dp)
                         .padding(5.dp)
                 )
+                Text(
+                    stringResource(R.string.nama2), // Harry Vaughan
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White,
+                    modifier = Modifier.padding(top = 15.dp)
+                )
+
         }
         Box(
             modifier = Modifier
