@@ -122,6 +122,16 @@ fun ActivitasPertama(modifier: Modifier) {
                 containerColor = Color.Green
             )
         ) {
+            Row {
+                val gambar = painterResource(R.drawable.aqeelacalista)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
+                Spacer(modifier = Modifier.width(30.dp))
 
         Box(
             modifier = Modifier
