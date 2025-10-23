@@ -26,12 +26,14 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun ActivitasPertama(modifier: Modifier) {
+fun ActivitasPertama(modifier: Modifier = Modifier) {
     Column(
-        modifier = Modifier.padding(top = 100.dp)
+        modifier = Modifier
+            .padding(top = 100.dp)
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
         Text(
             stringResource(R.string.prodi),
             fontSize = 35.sp,
@@ -42,16 +44,17 @@ fun ActivitasPertama(modifier: Modifier) {
             fontSize = 20.sp,
             fontWeight = FontWeight.Bold
         )
+
         Spacer(modifier = Modifier.height(25.dp))
+
+
         Card(
             modifier = Modifier
-                .fillMaxWidth(1f)
+                .fillMaxWidth()
                 .padding(12.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = Color.DarkGray
-            )
+            colors = CardDefaults.cardColors(containerColor = Color.DarkGray)
         ) {
-            Row() {
+            Row(modifier = Modifier.padding(8.dp)) {
                 val gambar = painterResource(R.drawable.logo)
                 Image(
                     painter = gambar,
@@ -59,7 +62,7 @@ fun ActivitasPertama(modifier: Modifier) {
                     modifier = Modifier.size(100.dp).padding(5.dp)
                 )
                 Spacer(modifier = Modifier.width(30.dp))
-                Column() {
+                Column {
                     Text(
                         stringResource(R.string.nama),
                         fontSize = 30.sp,
@@ -76,84 +79,81 @@ fun ActivitasPertama(modifier: Modifier) {
                 }
             }
         }
+
         Card(
             modifier = Modifier
                 .fillMaxWidth()
                 .padding(12.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = Color.Blue
-            )
+            colors = CardDefaults.cardColors(containerColor = Color.Blue)
         ) {
-            Row {
-                val gambar = painterResource(R.drawable.harryvaughan)
+            Row(modifier = Modifier.padding(8.dp)) {
+                val gambar = painterResource(R.drawable.harry_vaughan)
                 Image(
                     painter = gambar,
                     contentDescription = null,
-                    modifier = Modifier
-                        .size(100.dp)
-                        .padding(5.dp)
-                )
-                Text(
-                    stringResource(R.string.nama2), // Harry Vaughan
-                    fontSize = 25.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White,
-                    modifier = Modifier.padding(top = 15.dp)
-                )
-                Text(
-                    stringResource(R.string.no_Handphone2),
-                    fontSize = 18.sp,
-                    color = Color.White
-                )
-                Text(
-                    stringResource(R.string.alamat2),
-                    fontSize = 18.sp,
-                    color = Color.White
-                )
-            }
-        }
-    }
-        Spacer(modifier = Modifier.height(10.dp))
-        Card(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(12.dp),
-            colors = CardDefaults.cardColors(
-                containerColor = Color.Green
-            )
-        ) {
-            Row {
-                val gambar = painterResource(R.drawable.aqeelacalista)
-                Image(
-                    painter = gambar,
-                    contentDescription = null,
-                    modifier = Modifier
-                        .size(100.dp)
-                        .padding(5.dp)
+                    modifier = Modifier.size(100.dp).padding(5.dp)
                 )
                 Spacer(modifier = Modifier.width(30.dp))
-                Text(
-                    stringResource(R.string.nama3), // Aqeela Calista
-                    fontSize = 25.sp,
-                    fontWeight = FontWeight.Bold,
-                    color = Color.White,
-                    modifier = Modifier.padding(top = 15.dp)
-                )
-                Text(
-                    stringResource(R.string.no_Handphone3),
-                    fontSize = 18.sp,
-                    color = Color.White
-                )
-                Text(
-                    stringResource(R.string.alamat3),
-                    fontSize = 18.sp,
-                    color = Color.White
-                )
+                Column {
+                    Text(
+                        stringResource(R.string.nama2),
+                        fontSize = 25.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.no_Handphone2),
+                        fontSize = 18.sp,
+                        color = Color.White
+                    )
+                    Text(
+                        stringResource(R.string.alamat2),
+                        fontSize = 18.sp,
+                        color = Color.White
+                    )
+                }
             }
         }
-        Box(
+
+        Card(
             modifier = Modifier
-                .fillMaxSize()
+                .fillMaxWidth()
+                .padding(12.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.Green)
+        ) {
+            Row(modifier = Modifier.padding(8.dp)) {
+                val gambar = painterResource(R.drawable.aqeela_calista)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier.size(100.dp).padding(5.dp)
+                )
+                Spacer(modifier = Modifier.width(30.dp))
+                Column {
+                    Text(
+                        stringResource(R.string.nama3),
+                        fontSize = 25.sp,
+                        fontWeight = FontWeight.Bold,
+                        color = Color.White,
+                        modifier = Modifier.padding(top = 10.dp)
+                    )
+                    Text(
+                        stringResource(R.string.no_Handphone3),
+                        fontSize = 18.sp,
+                        color = Color.White
+                    )
+                    Text(
+                        stringResource(R.string.alamat3),
+                        fontSize = 18.sp,
+                        color = Color.White
+                    )
+                }
+            }
+        }
+
+        Box(
+            modifier = Modifier.fillMaxSize()
         ) {
             Text(
                 stringResource(R.string.copy),
@@ -163,3 +163,4 @@ fun ActivitasPertama(modifier: Modifier) {
             )
         }
     }
+}
