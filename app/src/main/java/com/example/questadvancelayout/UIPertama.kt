@@ -132,6 +132,14 @@ fun ActivitasPertama(modifier: Modifier) {
                         .padding(5.dp)
                 )
                 Spacer(modifier = Modifier.width(30.dp))
+                Text(
+                    stringResource(R.string.nama3), // Aqeela Calista
+                    fontSize = 25.sp,
+                    fontWeight = FontWeight.Bold,
+                    color = Color.White,
+                    modifier = Modifier.padding(top = 15.dp)
+                )
+
 
         Box(
             modifier = Modifier
