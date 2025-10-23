@@ -100,6 +100,11 @@ fun ActivitasPertama(modifier: Modifier) {
                     color = Color.White,
                     modifier = Modifier.padding(top = 15.dp)
                 )
+                Text(
+                    stringResource(R.string.no_Handphone2),
+                    fontSize = 18.sp,
+                    color = Color.White
+                )
 
         }
         Box(
