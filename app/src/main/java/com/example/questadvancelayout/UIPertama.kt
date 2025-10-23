@@ -84,7 +84,15 @@ fun ActivitasPertama(modifier: Modifier) {
                 containerColor = Color.Blue
             )
         ) {
-            
+            Row {
+                val gambar = painterResource(R.drawable.harryvaughan)
+                Image(
+                    painter = gambar,
+                    contentDescription = null,
+                    modifier = Modifier
+                        .size(100.dp)
+                        .padding(5.dp)
+                )
         }
         Box(
             modifier = Modifier
